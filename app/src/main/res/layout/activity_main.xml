@@ -24,28 +24,30 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="#646363"
+            app:strokeColor="#767575"
             app:strokeWidth="1dp">
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="25dp"
                 android:src="@drawable/ic_sharp_search"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/editText"
+                app:layout_constraintEnd_toStartOf="@+id/target_country"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/target_country"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_marginHorizontal="10dp"
-                android:hint="Search"
-                android:paddingHorizontal="10dp"
+                android:hint="Search Country"
+                android:paddingHorizontal="15dp"
+                android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageButton"
@@ -61,8 +63,8 @@
         android:layout_width="411dp"
         android:layout_height="206dp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout14"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13">
 
         <fragment
             android:id="@+id/map"
