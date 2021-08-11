@@ -7,10 +7,13 @@
     tools:context=".MainActivity">
 <!--    Search Feature -->
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -57,8 +60,9 @@
         android:id="@+id/constraintLayout"
         android:layout_width="411dp"
         android:layout_height="206dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="80dp">
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout14"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout13"
+        tools:layout_editor_absoluteX="0dp">
 
         <fragment
             android:id="@+id/map"
@@ -75,13 +79,19 @@
     <!--    Location Name , weather forecast, date-time -->
     <!--    Payload cards -->
 
+    <!-- weather details -->
+    <!--Forecasts -->
+    <!-- Weather forcasts -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="410dp"
+        android:id="@+id/constraintLayout14"
+        android:layout_width="match_parent"
         android:layout_height="86dp"
         android:layout_margin="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="300dp">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <TextView
             android:id="@+id/target_location"
@@ -121,15 +131,18 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-<!-- weather details -->
-    <!--Forecasts -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout15"
         android:layout_width="match_parent"
         android:layout_height="131dp"
         android:padding="5dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="414dp">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout14">
         <!--        LLeft-->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/materialCardView3"
@@ -424,9 +437,4 @@
         </com.google.android.material.card.MaterialCardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+   </androidx.constraintlayout.widget.ConstraintLayout>
